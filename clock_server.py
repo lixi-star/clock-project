@@ -31,7 +31,6 @@ HTML_PAGE = """
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* 刻度容器 */
         .ticks, .numbers {
             position: absolute;
             width: 100%;
@@ -48,15 +47,15 @@ HTML_PAGE = """
             width: 2px;
             height: 10px;
             background: #666;
-            transform-origin: center 140px;
+            transform-origin: center 132px;
         }
 
-        /* 大刻度 */
+        /* 大刻度：缩短并向内移，避免挡住数字 */
         .tick.major {
             width: 4px;
-            height: 18px;
+            height: 12px;
             background: #222;
-            transform-origin: center 136px;
+            transform-origin: center 130px;
         }
 
         /* 数字 */
@@ -148,15 +147,15 @@ HTML_PAGE = """
             tick.classList.add("major");
         }
 
-        tick.style.transform = `translate(-50%, -140px) rotate(${i * 6}deg)`;
+        tick.style.transform = `translate(-50%, -132px) rotate(${i * 6}deg)`;
         ticks.appendChild(tick);
     }
 
     // ========= 生成数字 1~12 =========
     const numbers = document.getElementById("numbers");
-    const centerX = 160;   // 表盘中心 x
-    const centerY = 160;   // 表盘中心 y
-    const radius = 120;    // 数字半径
+    const centerX = 160;
+    const centerY = 160;
+    const radius = 120;
 
     for (let i = 1; i <= 12; i++) {
         const span = document.createElement("span");
