@@ -153,8 +153,8 @@ HTML_PAGE = """
 
     // ========= 生成数字 1~12 =========
     const numbers = document.getElementById("numbers");
-    const centerX = 140;
-    const centerY = 140;
+    const centerX = 160;
+    const centerY = 160;
     const radius = 102;
 
     for (let i = 1; i <= 12; i++) {
