@@ -155,7 +155,7 @@ HTML_PAGE = """
     const numbers = document.getElementById("numbers");
     const centerX = 160;
     const centerY = 160;
-    const radius = 107;
+    const radius = 102;
 
     for (let i = 1; i <= 12; i++) {
         const span = document.createElement("span");
